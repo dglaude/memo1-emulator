@@ -24,9 +24,9 @@ All the low level support for Adafruit Fruit Jam is already written by other, I 
 **2. Adafruit MCUME**
 
 * **GitHub Repository**: [adafruit/MCUME](https://www.google.com/search?q=https://github.com/adafruit/MCUME) (Upstream: [Jean-MarcHarvengt/MCUME](https://github.com/Jean-MarcHarvengt/MCUME))
-* **Adafruit Learn Guide**: [MCUME Emulators on Fruit Jam](https://learn.adafruit.com/mcume-emulators-on-fruit-jam)[cite: 4]
+* **Adafruit Learn Guide**: [MCUME Emulators on Fruit Jam](https://learn.adafruit.com/mcume-emulators-on-fruit-jam)
 * **Original Author**: Jean-Marc Harvengt (`Jean-MarcHarvengt`)
-* **Fruit Jam Adaptation Author**: Adafruit (Tim C[cite: 4] and Jeff Epler)
+* **Fruit Jam Adaptation Author**: Adafruit (Tim C and Jeff Epler)
 
 **3. retroJam Multi-Emulator**
 
@@ -39,11 +39,11 @@ All the low level support for Adafruit Fruit Jam is already written by other, I 
 
 **Fruit Jam Reload** provides the closest architectural alignment to the Memo-1 while keeping software complexity to a minimum:
 
-* **CPU Family Parity**: It includes a cycle-stepped 6502 core running at 1 MHz[cite: 1], identical to the clock speed and instruction set needed to execute the Memo-1 ROM without modification[cite: 1].
-* **Text-Oriented Display Architecture**: Unlike console emulators that rely heavily on tilemaps and sprite hardware, the Apple //e base natively handles a 40-column text mode[cite: 1]. This maps cleanly to the Memo-1’s 40×24 Videotex/Minitel screen format.
-* **Direct Physical Keyboard Pipeline**: Designed specifically for personal computers where users enter text and write BASIC programs[cite: 1], the project routes USB HID keystrokes straight into system characters[cite: 1, 2] rather than downsampling them into gamepad button presses.
-* **Matching Sound Primitive**: The Apple //e generates sound via a 1-bit speaker toggle[cite: 2], which directly mirrors how the Memo-1 uses bit 7 of its VIA 65C22 to trigger audio tones. The audio pathway to the Fruit Jam’s onboard TLV320 DAC is already implemented and validated[cite: 2].
-* **Lean Codebase**: With over 90% written in straightforward C[cite: 1], the repository avoids multi-system framework abstractions, making it simple to strip away the Apple-specific MMU/disk controller[cite: 1] and attach the Memo-1 memory map (RAM, ROM, VIA 65C22, and ACIA 6551).
+* **CPU Family Parity**: It includes a cycle-stepped 6502 core running at 1 MHz, identical to the clock speed and instruction set needed to execute the Memo-1 ROM without modification.
+* **Text-Oriented Display Architecture**: Unlike console emulators that rely heavily on tilemaps and sprite hardware, the Apple //e base natively handles a 40-column text mode. This maps cleanly to the Memo-1’s 40×24 Videotex/Minitel screen format.
+* **Direct Physical Keyboard Pipeline**: Designed specifically for personal computers where users enter text and write BASIC programs, the project routes USB HID keystrokes straight into system characters rather than downsampling them into gamepad button presses.
+* **Matching Sound Primitive**: The Apple //e generates sound via a 1-bit speaker toggle, which directly mirrors how the Memo-1 uses bit 7 of its VIA 65C22 to trigger audio tones. The audio pathway to the Fruit Jam’s onboard TLV320 DAC is already implemented and validated.
+* **Lean Codebase**: With over 90% written in straightforward C, the repository avoids multi-system framework abstractions, making it simple to strip away the Apple-specific MMU/disk controller and attach the Memo-1 memory map (RAM, ROM, VIA 65C22, and ACIA 6551).
 
 ---
 
